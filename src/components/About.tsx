@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 
 const skills = [
-  "Branding", "Illustration", "Social Media Design", "UI/UX", "Motion Graphics",
+  "Social Media", "Illustration", "Social Media Design", "UI/UX", "Motion Graphics",
   "Art Direction", "Typography", "Editorial",
 ];
 
