@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import heroImg from "@/assets/konouz-hero.jpg";
+import heroImg from "@/assets/konouz-hero.png";
 
 export function Hero() {
   return (
@@ -54,7 +54,7 @@ export function Hero() {
             {[
               { n: "120+", l: "Projects" },
               { n: "5y", l: "Experience" },
-              { n: "40+", l: "Happy clients" },
+              { n: "20+", l: "Happy clients" },
             ].map((s) => (
               <div key={s.l}>
                 <div className="font-display text-3xl font-semibold text-gradient">{s.n}</div>
