@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "KonouzVisuals" },
+      { name: "description", content: "Konouz Creative Studio is a modern, artistic portfolio website for a graphic designer." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "KonouzVisuals" },
+      { property: "og:description", content: "Konouz Creative Studio is a modern, artistic portfolio website for a graphic designer." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "KonouzVisuals" },
+      { name: "twitter:description", content: "Konouz Creative Studio is a modern, artistic portfolio website for a graphic designer." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/WaZKwdO6vOZEoMlYux5ekPK1x8H2/social-images/social-1778937279851-ChatGPT_Image_May_16,_2026,_03_51_45_PM.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/WaZKwdO6vOZEoMlYux5ekPK1x8H2/social-images/social-1778937279851-ChatGPT_Image_May_16,_2026,_03_51_45_PM.webp" },
     ],
     links: [
       {
