@@ -15,12 +15,12 @@ const projects: Project[] = [
   { id: 1, title: "Lila Studio", cat: "Branding", img: w1, year: "2025", desc: "A soft brand identity for a botanical perfume studio — built around layered pastels and curved serif typography." },
   { id: 2, title: "Mochi Friends", cat: "Illustrations", img: w2, year: "2025", desc: "A character series of plushy friends for a children's stationery line." },
   { id: 3, title: "Daydream Posters", cat: "Posters", img: w3, year: "2024", desc: "An editorial poster collection exploring dreams, color, and stillness." },
-  { id: 4, title: "Bloom Campaign", cat: "Ads", img: w4, year: "2024", desc: "Spring campaign visuals — soft shapes, warm grain, and a pastel-first palette." },
+  { id: 4, title: "Bloom Campaign", cat: "Social Media", img: w4, year: "2024", desc: "Spring campaign visuals — soft shapes, warm grain, and a pastel-first palette." },
   { id: 5, title: "Sweetbeam Care", cat: "Branding", img: w5, year: "2025", desc: "Packaging system for a feminine wellness brand." },
   { id: 6, title: "Cloud Tales", cat: "Illustrations", img: w6, year: "2024", desc: "An illustration series for a dreamy children's book about clouds." },
 ];
 
-const cats = ["All", "Branding", "Illustrations", "Posters", "Ads"] as const;
+const cats = ["All", "Branding", "Illustrations", "Posters", "Social Media"] as const;
 
 export function Portfolio() {
   const [active, setActive] = useState<(typeof cats)[number]>("All");
