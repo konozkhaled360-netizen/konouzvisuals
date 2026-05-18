@@ -1,5 +1,6 @@
 import { useState, useRef, MouseEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { useNavigate } from "@tanstack/react-router";
 import w1 from "@/assets/work-1.jpg";
 import w2 from "@/assets/work-2.jpg";
 import w3 from "@/assets/work-3.jpg";
