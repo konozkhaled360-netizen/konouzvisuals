@@ -1,5 +1,6 @@
 import { useState, useRef, MouseEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { useNavigate } from "@tanstack/react-router";
 import w1 from "@/assets/work-1.jpg";
 import w2 from "@/assets/work-2.jpg";
 import w3 from "@/assets/work-3.jpg";
@@ -379,6 +380,15 @@ function ProjectModal({ cat, onClose }: { cat: Category; onClose: () => void }) 
 
 export function Portfolio() {
   const [open, setOpen] = useState<Category | null>(null);
+  const navigate = useNavigate();
+
+  const handleOpen = (c: Category) => {
+    if (c.id === "social") {
+      navigate({ to: "/social-media" });
+      return;
+    }
+    setOpen(c);
+  };
 
   return (
     <section id="work" className="relative overflow-hidden px-6 py-32 md:px-12 lg:px-20">
@@ -413,7 +423,7 @@ export function Portfolio() {
               key={c.id}
               className={i % 2 === 1 ? "lg:translate-y-10" : ""}
             >
-              <FloatingCard cat={c} i={i} onOpen={() => setOpen(c)} />
+              <FloatingCard cat={c} i={i} onOpen={() => handleOpen(c)} />
             </div>
           ))}
         </div>
