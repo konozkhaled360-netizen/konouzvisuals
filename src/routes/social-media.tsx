@@ -100,7 +100,7 @@ const projects: Project[] = [
     description:
       "A cinematic story series taking viewers across golden-hour landscapes — type-driven covers and a coherent feed system.",
     gallery: buildGallery(5),
-    accent: "oklch(0.7 0.17 50)",
+    accent: "oklch(0.86 0.09 250)",
   },
 ];
 
