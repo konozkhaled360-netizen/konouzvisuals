@@ -50,7 +50,7 @@ const projects: Project[] = [
     description:
       "A dreamy editorial feed system blending soft typography, golden hues and cinematic photography for a luxury atelier brand.",
     gallery: buildGallery(0),
-    accent: "oklch(0.72 0.16 55)",
+    accent: "oklch(0.88 0.09 350)",
   },
   {
     id: "amber",
