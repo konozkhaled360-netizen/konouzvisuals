@@ -333,8 +333,8 @@ function ProjectSection({
             transition={{ duration: 0.6, delay: (i % 4) * 0.06 }}
             whileHover={{ y: -6, scale: 1.02 }}
             onClick={() => onOpen(src)}
-            className="group relative aspect-square overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]"
-            style={{ boxShadow: "0 30px 60px -30px rgba(0,0,0,0.8)" }}
+            className="group relative aspect-square overflow-hidden rounded-2xl border border-white/60 bg-white/40 backdrop-blur-md"
+            style={{ boxShadow: "var(--shadow-soft)" }}
           >
             <img
               src={src}
@@ -357,7 +357,7 @@ function ProjectSection({
                 boxShadow: `0 0 0 1px ${project.accent}, 0 0 60px -10px ${project.accent}`,
               }}
             />
-            <span className="absolute bottom-3 right-3 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-black/40 text-xs text-white opacity-0 backdrop-blur-md transition-all duration-500 group-hover:opacity-100">
+            <span className="absolute bottom-3 right-3 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/70 bg-white/70 text-xs text-foreground opacity-0 backdrop-blur-md transition-all duration-500 group-hover:opacity-100">
               ↗
             </span>
           </motion.button>
@@ -369,8 +369,8 @@ function ProjectSection({
         <div className="mt-10 flex justify-center">
           <button
             onClick={() => setVisibleCount(project.gallery.length)}
-            className="rounded-full border border-white/15 bg-white/[0.03] px-7 py-3 text-xs uppercase tracking-[0.3em] text-white/70 backdrop-blur-md transition-all hover:border-white/30 hover:bg-white/[0.08] hover:text-white"
-            style={{ boxShadow: `0 0 40px -20px ${project.accent}` }}
+            className="rounded-full border border-white/70 bg-white/60 px-7 py-3 text-xs uppercase tracking-[0.3em] text-foreground/80 backdrop-blur-md transition-all hover:bg-white/80 hover:text-foreground"
+            style={{ boxShadow: `0 10px 40px -15px ${project.accent}` }}
           >
             See more
           </button>
@@ -384,7 +384,7 @@ function ProjectSection({
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(90deg, transparent, oklch(1 0 0 / 0.18), transparent)",
+                "linear-gradient(90deg, transparent, oklch(0.5 0.04 300 / 0.3), transparent)",
             }}
           />
         </div>
