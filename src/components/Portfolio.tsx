@@ -423,7 +423,7 @@ export function Portfolio() {
               key={c.id}
               className={i % 2 === 1 ? "lg:translate-y-10" : ""}
             >
-              <FloatingCard cat={c} i={i} onOpen={() => setOpen(c)} />
+              <FloatingCard cat={c} i={i} onOpen={() => handleOpen(c)} />
             </div>
           ))}
         </div>
