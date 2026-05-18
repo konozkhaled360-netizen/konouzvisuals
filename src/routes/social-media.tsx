@@ -80,7 +80,7 @@ const projects: Project[] = [
     description:
       "Editorial-style social content for an architecture studio — minimal grids, soft daylight tones and cinematic depth.",
     gallery: buildGallery(1),
-    accent: "oklch(0.72 0.15 65)",
+    accent: "oklch(0.88 0.08 220)",
   },
   {
     id: "vela",
