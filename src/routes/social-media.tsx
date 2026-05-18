@@ -197,14 +197,14 @@ function SocialMediaPage() {
       </div>
 
       {/* footer cta */}
-      <footer className="relative z-10 border-t border-white/10 px-6 py-16 text-center md:px-12">
-        <p className="text-xs uppercase tracking-[0.4em] text-white/40">
+      <footer className="relative z-10 border-t border-white/40 px-6 py-16 text-center md:px-12">
+        <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
           Have a brand in mind?
         </p>
         <Link
           to="/"
           hash="contact"
-          className="mt-6 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm uppercase tracking-[0.3em] text-white backdrop-blur-md transition-all hover:border-amber-200/50 hover:bg-white/10 hover:shadow-[0_0_40px_-10px_oklch(0.7_0.18_45/0.6)]"
+          className="mt-6 inline-flex items-center gap-3 rounded-full border border-white/60 bg-white/60 px-8 py-4 text-sm uppercase tracking-[0.3em] text-foreground backdrop-blur-md transition-all hover:bg-white/80 hover:shadow-[var(--shadow-soft)]"
         >
           Start a project →
         </Link>
@@ -218,7 +218,7 @@ function SocialMediaPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setLightbox(null)}
-            className="fixed inset-0 z-[200] flex items-center justify-center bg-black/85 p-4 backdrop-blur-xl md:p-10"
+            className="fixed inset-0 z-[200] flex items-center justify-center bg-foreground/40 p-4 backdrop-blur-xl md:p-10"
           >
             <motion.div
               initial={{ scale: 0.92, opacity: 0 }}
@@ -226,7 +226,7 @@ function SocialMediaPage() {
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-h-[88vh] w-full max-w-3xl overflow-hidden rounded-3xl border border-white/15"
+              className="relative max-h-[88vh] w-full max-w-3xl overflow-hidden rounded-3xl border border-white/70"
               style={{
                 boxShadow: `0 0 120px -10px ${lightbox.accent}`,
               }}
@@ -240,7 +240,7 @@ function SocialMediaPage() {
             <button
               onClick={() => setLightbox(null)}
               aria-label="Close"
-              className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-md transition-transform hover:rotate-90"
+              className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/70 bg-white/70 text-foreground backdrop-blur-md transition-transform hover:rotate-90"
             >
               ✕
             </button>
