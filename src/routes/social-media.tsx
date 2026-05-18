@@ -60,7 +60,7 @@ const projects: Project[] = [
     description:
       "A warm, sensual campaign series — molten golds, deep ambers and slow motion stories crafted for a niche perfume launch.",
     gallery: buildGallery(2),
-    accent: "oklch(0.7 0.18 35)",
+    accent: "oklch(0.86 0.09 230)",
   },
   {
     id: "saffron",
