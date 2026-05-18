@@ -159,7 +159,7 @@ function SocialMediaPage() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-block text-xs uppercase tracking-[0.5em] text-amber-200/70"
+          className="inline-block text-xs uppercase tracking-[0.5em] text-primary"
         >
           Selected campaigns
         </motion.span>
@@ -170,20 +170,13 @@ function SocialMediaPage() {
           className="mt-6 font-display text-5xl font-semibold leading-[1.05] md:text-7xl"
         >
           Social Media{" "}
-          <span className="italic text-transparent" style={{
-            backgroundImage: "linear-gradient(135deg, #fcd9a6, #e88a4a, #b85a2a)",
-            WebkitBackgroundClip: "text",
-            backgroundClip: "text",
-          }}>
-            stories
-          </span>{" "}
-          that glow.
+          <span className="italic text-gradient">stories</span> that glow.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mx-auto mt-6 max-w-2xl text-white/60 md:text-lg"
+          className="mx-auto mt-6 max-w-2xl text-muted-foreground md:text-lg"
         >
           A curated archive of feeds, launches and campaign systems — built for
           luxury, lifestyle and editorial brands.
