@@ -380,6 +380,15 @@ function ProjectModal({ cat, onClose }: { cat: Category; onClose: () => void }) 
 
 export function Portfolio() {
   const [open, setOpen] = useState<Category | null>(null);
+  const navigate = useNavigate();
+
+  const handleOpen = (c: Category) => {
+    if (c.id === "social") {
+      navigate({ to: "/social-media" });
+      return;
+    }
+    setOpen(c);
+  };
 
   return (
     <section id="work" className="relative overflow-hidden px-6 py-32 md:px-12 lg:px-20">
