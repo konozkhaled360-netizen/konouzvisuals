@@ -276,7 +276,7 @@ function ProjectSection({
       {/* soft warm glow per section */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-20 top-10 -z-10 h-72 w-72 rounded-full opacity-40 blur-3xl"
+        className="pointer-events-none absolute -left-20 top-10 -z-10 h-72 w-72 rounded-full opacity-60 blur-3xl"
         style={{ background: project.accent }}
       />
 
@@ -288,15 +288,15 @@ function ProjectSection({
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative inline-flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white/[0.04] font-display text-xl backdrop-blur-md md:h-20 md:w-20 md:text-2xl"
+            className="relative inline-flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-white/70 bg-white/60 font-display text-xl text-foreground backdrop-blur-md md:h-20 md:w-20 md:text-2xl"
             style={{
-              boxShadow: `0 0 50px -15px ${project.accent}, inset 0 0 30px -10px ${project.accent}`,
+              boxShadow: `0 10px 40px -10px ${project.accent}, inset 0 0 30px -10px ${project.accent}`,
             }}
           >
             <span
               className="bg-clip-text text-transparent"
               style={{
-                backgroundImage: `linear-gradient(135deg, #fff, ${project.accent})`,
+                backgroundImage: `linear-gradient(135deg, oklch(0.4 0.1 320), ${project.accent})`,
               }}
             >
               {project.initials}
@@ -304,23 +304,20 @@ function ProjectSection({
           </motion.div>
           <div>
             <div className="flex items-center gap-3">
-              <span className="text-xs uppercase tracking-[0.35em] text-white/40">
+              <span className="text-xs uppercase tracking-[0.35em] text-muted-foreground">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <span className="h-px w-8 bg-white/20" />
+              <span className="h-px w-8 bg-foreground/20" />
             </div>
             <h2 className="mt-2 font-display text-4xl font-semibold md:text-5xl">
               {project.name}
             </h2>
-            <p
-              className="mt-2 text-xs uppercase tracking-[0.3em]"
-              style={{ color: project.accent }}
-            >
+            <p className="mt-2 text-xs uppercase tracking-[0.3em] text-primary">
               {project.category}
             </p>
           </div>
         </div>
-        <p className="max-w-md text-white/60 md:text-right">
+        <p className="max-w-md text-muted-foreground md:text-right">
           {project.description}
         </p>
       </div>
