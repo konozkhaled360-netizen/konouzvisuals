@@ -90,7 +90,7 @@ const projects: Project[] = [
     description:
       "A glowing launch campaign — warm rose-gold palettes, tactile product moments and motion-led storytelling for the feed.",
     gallery: buildGallery(3),
-    accent: "oklch(0.74 0.16 25)",
+    accent: "oklch(0.89 0.08 0)",
   },
   {
     id: "orion",
