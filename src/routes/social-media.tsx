@@ -115,19 +115,24 @@ function SocialMediaPage() {
   }, [lightbox]);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black text-white">
-      {/* dark gradient backdrop */}
+    <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
+      {/* dreamy backdrop — baby blue + light pink */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 -z-10"
+        style={{ background: "var(--gradient-aura)" }}
+      />
       <div
         aria-hidden
         className="pointer-events-none fixed inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(circle at 15% 10%, oklch(0.35 0.12 45 / 0.35), transparent 55%), radial-gradient(circle at 85% 90%, oklch(0.3 0.14 25 / 0.3), transparent 55%), #000",
+            "radial-gradient(circle at 15% 10%, oklch(0.92 0.07 350 / 0.55), transparent 55%), radial-gradient(circle at 85% 90%, oklch(0.9 0.08 230 / 0.5), transparent 55%)",
         }}
       />
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 -z-10 opacity-[0.06] mix-blend-overlay"
+        className="pointer-events-none fixed inset-0 -z-10 opacity-[0.08] mix-blend-overlay"
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.6'/></svg>\")",
@@ -138,12 +143,12 @@ function SocialMediaPage() {
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-8 md:px-12">
         <Link
           to="/"
-          className="group inline-flex items-center gap-2 text-sm uppercase tracking-[0.3em] text-white/70 transition-colors hover:text-white"
+          className="group inline-flex items-center gap-2 text-sm uppercase tracking-[0.3em] text-foreground/70 transition-colors hover:text-foreground"
         >
           <span className="inline-block transition-transform group-hover:-translate-x-1">←</span>
           Back to portfolio
         </Link>
-        <span className="text-xs uppercase tracking-[0.4em] text-white/40">
+        <span className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
           Konouz · Social Media
         </span>
       </header>
