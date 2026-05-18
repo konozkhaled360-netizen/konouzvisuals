@@ -50,7 +50,7 @@ const projects: Project[] = [
     description:
       "A dreamy editorial feed system blending soft typography, golden hues and cinematic photography for a luxury atelier brand.",
     gallery: buildGallery(0),
-    accent: "oklch(0.72 0.16 55)",
+    accent: "oklch(0.88 0.09 350)",
   },
   {
     id: "amber",
@@ -60,7 +60,7 @@ const projects: Project[] = [
     description:
       "A warm, sensual campaign series — molten golds, deep ambers and slow motion stories crafted for a niche perfume launch.",
     gallery: buildGallery(2),
-    accent: "oklch(0.7 0.18 35)",
+    accent: "oklch(0.86 0.09 230)",
   },
   {
     id: "saffron",
@@ -70,7 +70,7 @@ const projects: Project[] = [
     description:
       "Mouth-watering content design — bold typography, rich plating photography and a consistent visual rhythm across the feed.",
     gallery: buildGallery(4),
-    accent: "oklch(0.68 0.19 40)",
+    accent: "oklch(0.87 0.08 340)",
   },
   {
     id: "lumen",
@@ -80,7 +80,7 @@ const projects: Project[] = [
     description:
       "Editorial-style social content for an architecture studio — minimal grids, soft daylight tones and cinematic depth.",
     gallery: buildGallery(1),
-    accent: "oklch(0.72 0.15 65)",
+    accent: "oklch(0.88 0.08 220)",
   },
   {
     id: "vela",
@@ -90,7 +90,7 @@ const projects: Project[] = [
     description:
       "A glowing launch campaign — warm rose-gold palettes, tactile product moments and motion-led storytelling for the feed.",
     gallery: buildGallery(3),
-    accent: "oklch(0.74 0.16 25)",
+    accent: "oklch(0.89 0.08 0)",
   },
   {
     id: "orion",
@@ -100,7 +100,7 @@ const projects: Project[] = [
     description:
       "A cinematic story series taking viewers across golden-hour landscapes — type-driven covers and a coherent feed system.",
     gallery: buildGallery(5),
-    accent: "oklch(0.7 0.17 50)",
+    accent: "oklch(0.86 0.09 250)",
   },
 ];
 
@@ -115,19 +115,24 @@ function SocialMediaPage() {
   }, [lightbox]);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-black text-white">
-      {/* dark gradient backdrop */}
+    <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
+      {/* dreamy backdrop — baby blue + light pink */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0 -z-10"
+        style={{ background: "var(--gradient-aura)" }}
+      />
       <div
         aria-hidden
         className="pointer-events-none fixed inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(circle at 15% 10%, oklch(0.35 0.12 45 / 0.35), transparent 55%), radial-gradient(circle at 85% 90%, oklch(0.3 0.14 25 / 0.3), transparent 55%), #000",
+            "radial-gradient(circle at 15% 10%, oklch(0.92 0.07 350 / 0.55), transparent 55%), radial-gradient(circle at 85% 90%, oklch(0.9 0.08 230 / 0.5), transparent 55%)",
         }}
       />
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 -z-10 opacity-[0.06] mix-blend-overlay"
+        className="pointer-events-none fixed inset-0 -z-10 opacity-[0.08] mix-blend-overlay"
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.6'/></svg>\")",
@@ -138,12 +143,12 @@ function SocialMediaPage() {
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-8 md:px-12">
         <Link
           to="/"
-          className="group inline-flex items-center gap-2 text-sm uppercase tracking-[0.3em] text-white/70 transition-colors hover:text-white"
+          className="group inline-flex items-center gap-2 text-sm uppercase tracking-[0.3em] text-foreground/70 transition-colors hover:text-foreground"
         >
           <span className="inline-block transition-transform group-hover:-translate-x-1">←</span>
           Back to portfolio
         </Link>
-        <span className="text-xs uppercase tracking-[0.4em] text-white/40">
+        <span className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
           Konouz · Social Media
         </span>
       </header>
@@ -154,7 +159,7 @@ function SocialMediaPage() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-block text-xs uppercase tracking-[0.5em] text-amber-200/70"
+          className="inline-block text-xs uppercase tracking-[0.5em] text-primary"
         >
           Selected campaigns
         </motion.span>
@@ -165,20 +170,13 @@ function SocialMediaPage() {
           className="mt-6 font-display text-5xl font-semibold leading-[1.05] md:text-7xl"
         >
           Social Media{" "}
-          <span className="italic text-transparent" style={{
-            backgroundImage: "linear-gradient(135deg, #fcd9a6, #e88a4a, #b85a2a)",
-            WebkitBackgroundClip: "text",
-            backgroundClip: "text",
-          }}>
-            stories
-          </span>{" "}
-          that glow.
+          <span className="italic text-gradient">stories</span> that glow.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mx-auto mt-6 max-w-2xl text-white/60 md:text-lg"
+          className="mx-auto mt-6 max-w-2xl text-muted-foreground md:text-lg"
         >
           A curated archive of feeds, launches and campaign systems — built for
           luxury, lifestyle and editorial brands.
@@ -199,14 +197,14 @@ function SocialMediaPage() {
       </div>
 
       {/* footer cta */}
-      <footer className="relative z-10 border-t border-white/10 px-6 py-16 text-center md:px-12">
-        <p className="text-xs uppercase tracking-[0.4em] text-white/40">
+      <footer className="relative z-10 border-t border-white/40 px-6 py-16 text-center md:px-12">
+        <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground">
           Have a brand in mind?
         </p>
         <Link
           to="/"
           hash="contact"
-          className="mt-6 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-8 py-4 text-sm uppercase tracking-[0.3em] text-white backdrop-blur-md transition-all hover:border-amber-200/50 hover:bg-white/10 hover:shadow-[0_0_40px_-10px_oklch(0.7_0.18_45/0.6)]"
+          className="mt-6 inline-flex items-center gap-3 rounded-full border border-white/60 bg-white/60 px-8 py-4 text-sm uppercase tracking-[0.3em] text-foreground backdrop-blur-md transition-all hover:bg-white/80 hover:shadow-[var(--shadow-soft)]"
         >
           Start a project →
         </Link>
@@ -220,7 +218,7 @@ function SocialMediaPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setLightbox(null)}
-            className="fixed inset-0 z-[200] flex items-center justify-center bg-black/85 p-4 backdrop-blur-xl md:p-10"
+            className="fixed inset-0 z-[200] flex items-center justify-center bg-foreground/40 p-4 backdrop-blur-xl md:p-10"
           >
             <motion.div
               initial={{ scale: 0.92, opacity: 0 }}
@@ -228,7 +226,7 @@ function SocialMediaPage() {
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 220 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-h-[88vh] w-full max-w-3xl overflow-hidden rounded-3xl border border-white/15"
+              className="relative max-h-[88vh] w-full max-w-3xl overflow-hidden rounded-3xl border border-white/70"
               style={{
                 boxShadow: `0 0 120px -10px ${lightbox.accent}`,
               }}
@@ -242,7 +240,7 @@ function SocialMediaPage() {
             <button
               onClick={() => setLightbox(null)}
               aria-label="Close"
-              className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-md transition-transform hover:rotate-90"
+              className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/70 bg-white/70 text-foreground backdrop-blur-md transition-transform hover:rotate-90"
             >
               ✕
             </button>
@@ -278,7 +276,7 @@ function ProjectSection({
       {/* soft warm glow per section */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-20 top-10 -z-10 h-72 w-72 rounded-full opacity-40 blur-3xl"
+        className="pointer-events-none absolute -left-20 top-10 -z-10 h-72 w-72 rounded-full opacity-60 blur-3xl"
         style={{ background: project.accent }}
       />
 
@@ -290,15 +288,15 @@ function ProjectSection({
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative inline-flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white/[0.04] font-display text-xl backdrop-blur-md md:h-20 md:w-20 md:text-2xl"
+            className="relative inline-flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-white/70 bg-white/60 font-display text-xl text-foreground backdrop-blur-md md:h-20 md:w-20 md:text-2xl"
             style={{
-              boxShadow: `0 0 50px -15px ${project.accent}, inset 0 0 30px -10px ${project.accent}`,
+              boxShadow: `0 10px 40px -10px ${project.accent}, inset 0 0 30px -10px ${project.accent}`,
             }}
           >
             <span
               className="bg-clip-text text-transparent"
               style={{
-                backgroundImage: `linear-gradient(135deg, #fff, ${project.accent})`,
+                backgroundImage: `linear-gradient(135deg, oklch(0.4 0.1 320), ${project.accent})`,
               }}
             >
               {project.initials}
@@ -306,23 +304,20 @@ function ProjectSection({
           </motion.div>
           <div>
             <div className="flex items-center gap-3">
-              <span className="text-xs uppercase tracking-[0.35em] text-white/40">
+              <span className="text-xs uppercase tracking-[0.35em] text-muted-foreground">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <span className="h-px w-8 bg-white/20" />
+              <span className="h-px w-8 bg-foreground/20" />
             </div>
             <h2 className="mt-2 font-display text-4xl font-semibold md:text-5xl">
               {project.name}
             </h2>
-            <p
-              className="mt-2 text-xs uppercase tracking-[0.3em]"
-              style={{ color: project.accent }}
-            >
+            <p className="mt-2 text-xs uppercase tracking-[0.3em] text-primary">
               {project.category}
             </p>
           </div>
         </div>
-        <p className="max-w-md text-white/60 md:text-right">
+        <p className="max-w-md text-muted-foreground md:text-right">
           {project.description}
         </p>
       </div>
@@ -338,8 +333,8 @@ function ProjectSection({
             transition={{ duration: 0.6, delay: (i % 4) * 0.06 }}
             whileHover={{ y: -6, scale: 1.02 }}
             onClick={() => onOpen(src)}
-            className="group relative aspect-square overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]"
-            style={{ boxShadow: "0 30px 60px -30px rgba(0,0,0,0.8)" }}
+            className="group relative aspect-square overflow-hidden rounded-2xl border border-white/60 bg-white/40 backdrop-blur-md"
+            style={{ boxShadow: "var(--shadow-soft)" }}
           >
             <img
               src={src}
@@ -362,7 +357,7 @@ function ProjectSection({
                 boxShadow: `0 0 0 1px ${project.accent}, 0 0 60px -10px ${project.accent}`,
               }}
             />
-            <span className="absolute bottom-3 right-3 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-black/40 text-xs text-white opacity-0 backdrop-blur-md transition-all duration-500 group-hover:opacity-100">
+            <span className="absolute bottom-3 right-3 inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/70 bg-white/70 text-xs text-foreground opacity-0 backdrop-blur-md transition-all duration-500 group-hover:opacity-100">
               ↗
             </span>
           </motion.button>
@@ -374,8 +369,8 @@ function ProjectSection({
         <div className="mt-10 flex justify-center">
           <button
             onClick={() => setVisibleCount(project.gallery.length)}
-            className="rounded-full border border-white/15 bg-white/[0.03] px-7 py-3 text-xs uppercase tracking-[0.3em] text-white/70 backdrop-blur-md transition-all hover:border-white/30 hover:bg-white/[0.08] hover:text-white"
-            style={{ boxShadow: `0 0 40px -20px ${project.accent}` }}
+            className="rounded-full border border-white/70 bg-white/60 px-7 py-3 text-xs uppercase tracking-[0.3em] text-foreground/80 backdrop-blur-md transition-all hover:bg-white/80 hover:text-foreground"
+            style={{ boxShadow: `0 10px 40px -15px ${project.accent}` }}
           >
             See more
           </button>
@@ -389,7 +384,7 @@ function ProjectSection({
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(90deg, transparent, oklch(1 0 0 / 0.18), transparent)",
+                "linear-gradient(90deg, transparent, oklch(0.5 0.04 300 / 0.3), transparent)",
             }}
           />
         </div>
