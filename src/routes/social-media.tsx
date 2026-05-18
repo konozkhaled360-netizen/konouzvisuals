@@ -70,7 +70,7 @@ const projects: Project[] = [
     description:
       "Mouth-watering content design — bold typography, rich plating photography and a consistent visual rhythm across the feed.",
     gallery: buildGallery(4),
-    accent: "oklch(0.68 0.19 40)",
+    accent: "oklch(0.87 0.08 340)",
   },
   {
     id: "lumen",
