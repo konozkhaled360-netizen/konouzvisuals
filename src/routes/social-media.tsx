@@ -366,7 +366,7 @@ function ProjectSection({
             transition={{ duration: 0.6, delay: (i % 4) * 0.06 }}
             whileHover={{ y: -6, scale: 1.02 }}
             onClick={() => onOpen(src)}
-            className="group relative aspect-square overflow-hidden rounded-2xl border border-white/60 bg-white/40 backdrop-blur-md"
+            className={`group relative ${project.preserveAspect ? "aspect-[4/5]" : "aspect-square"} overflow-hidden rounded-2xl border border-white/60 bg-white/40 backdrop-blur-md`}
             style={{ boxShadow: "var(--shadow-soft)" }}
           >
             <img
