@@ -336,7 +336,7 @@ function ProjectSection({
             </p>
           </div>
         </div>
-        <p className="max-w-md text-muted-foreground md:text-right">
+        <p className="max-w-md text-muted-foreground text-left">
           {project.description}
         </p>
       </div>
