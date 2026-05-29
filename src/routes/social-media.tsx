@@ -7,6 +7,14 @@ import w3 from "@/assets/work-3.jpg";
 import w4 from "@/assets/work-4.jpg";
 import w5 from "@/assets/work-5.jpg";
 import w6 from "@/assets/work-6.jpg";
+import karelloSocial1 from "@/assets/karello-social-1.png";
+import karelloSocial2 from "@/assets/karello-social-2.png";
+import karelloSocial3 from "@/assets/karello-social-3.png";
+import karelloSocial4 from "@/assets/karello-social-4.jpg";
+import karelloSocial5 from "@/assets/karello-social-5.png";
+import karelloSocial6 from "@/assets/karello-social-6.png";
+import karelloSocial7 from "@/assets/karello-social-7.png";
+import karelloSocial8 from "@/assets/karello-social-8.png";
 
 export const Route = createFileRoute("/social-media")({
   head: () => ({
@@ -41,15 +49,26 @@ const allShots = [w1, w2, w3, w4, w5, w6];
 const buildGallery = (offset: number, n = 10) =>
   Array.from({ length: n }, (_, i) => allShots[(offset + i) % allShots.length]);
 
+const karelloShots = [
+  karelloSocial1,
+  karelloSocial2,
+  karelloSocial3,
+  karelloSocial4,
+  karelloSocial5,
+  karelloSocial6,
+  karelloSocial7,
+  karelloSocial8,
+];
+
 const projects: Project[] = [
   {
     id: "karello",
     name: "Karello",
     initials: "K",
-    category: "Fashion & Lifestyle · Instagram Feed",
+    category: "E-commerce Campaigns · Social Media Design",
     description:
-      "A dreamy editorial feed system blending soft typography, golden hues and cinematic photography for a luxury atelier brand.",
-    gallery: buildGallery(0),
+      "A bold social media series for Karello featuring high-contrast campaign visuals, product storytelling and scroll-stopping promotional creatives.",
+    gallery: karelloShots,
     accent: "oklch(0.88 0.09 350)",
   },
   {
