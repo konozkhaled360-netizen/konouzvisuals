@@ -91,8 +91,9 @@ const projects: Project[] = [
     category: "Markrting Agency",
     description:
       "A Saudi-based marketing agency delivering innovative business solutions and strategic marketing services to brands across the Kingdom and international markets, helping businesses grow through creative campaigns, digital solutions, branding, and market-driven strategies.",
-    gallery: buildGallery(2),
+    gallery: zedhaShots,
     accent: "oklch(0.86 0.09 230)",
+    preserveAspect: true,
   },
   {
     id: "saffron",
