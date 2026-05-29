@@ -49,15 +49,26 @@ const allShots = [w1, w2, w3, w4, w5, w6];
 const buildGallery = (offset: number, n = 10) =>
   Array.from({ length: n }, (_, i) => allShots[(offset + i) % allShots.length]);
 
+const karelloShots = [
+  karelloSocial1,
+  karelloSocial2,
+  karelloSocial3,
+  karelloSocial4,
+  karelloSocial5,
+  karelloSocial6,
+  karelloSocial7,
+  karelloSocial8,
+];
+
 const projects: Project[] = [
   {
     id: "karello",
     name: "Karello",
     initials: "K",
-    category: "Fashion & Lifestyle · Instagram Feed",
+    category: "E-commerce Campaigns · Social Media Design",
     description:
-      "A dreamy editorial feed system blending soft typography, golden hues and cinematic photography for a luxury atelier brand.",
-    gallery: buildGallery(0),
+      "A bold social media series for Karello featuring high-contrast campaign visuals, product storytelling and scroll-stopping promotional creatives.",
+    gallery: karelloShots,
     accent: "oklch(0.88 0.09 350)",
   },
   {
