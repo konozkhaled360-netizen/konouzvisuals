@@ -43,9 +43,9 @@ const buildGallery = (offset: number, n = 10) =>
 
 const projects: Project[] = [
   {
-    id: "noor",
-    name: "Noor Atelier",
-    initials: "NA",
+    id: "karello",
+    name: "Karello",
+    initials: "K",
     category: "Fashion & Lifestyle · Instagram Feed",
     description:
       "A dreamy editorial feed system blending soft typography, golden hues and cinematic photography for a luxury atelier brand.",
