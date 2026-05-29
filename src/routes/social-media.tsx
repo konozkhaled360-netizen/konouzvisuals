@@ -97,11 +97,11 @@ const projects: Project[] = [
   },
   {
     id: "saffron",
-    name: "Saffron Kitchen",
-    initials: "SK",
-    category: "Restaurant Brand · Feed & Reels",
+    name: "Tola baby",
+    initials: "TB",
+    category: "baby care brand",
     description:
-      "Mouth-watering content design — bold typography, rich plating photography and a consistent visual rhythm across the feed.",
+      "Tola Baby is a baby care brand offering gentle haircare products specially made for kids and babies, including shampoos, leave-in creams, and oil replacements. The brand focuses on safe, soft, and nourishing formulas that keep children’s hair healthy, smooth, and easy to manage for everyday care",
     gallery: buildGallery(4),
     accent: "oklch(0.87 0.08 340)",
   },
