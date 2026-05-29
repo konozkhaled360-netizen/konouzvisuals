@@ -7,6 +7,14 @@ import w3 from "@/assets/work-3.jpg";
 import w4 from "@/assets/work-4.jpg";
 import w5 from "@/assets/work-5.jpg";
 import w6 from "@/assets/work-6.jpg";
+import karelloSocial1 from "@/assets/karello-social-1.png";
+import karelloSocial2 from "@/assets/karello-social-2.png";
+import karelloSocial3 from "@/assets/karello-social-3.png";
+import karelloSocial4 from "@/assets/karello-social-4.jpg";
+import karelloSocial5 from "@/assets/karello-social-5.png";
+import karelloSocial6 from "@/assets/karello-social-6.png";
+import karelloSocial7 from "@/assets/karello-social-7.png";
+import karelloSocial8 from "@/assets/karello-social-8.png";
 
 export const Route = createFileRoute("/social-media")({
   head: () => ({
