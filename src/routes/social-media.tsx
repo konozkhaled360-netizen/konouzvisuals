@@ -15,6 +15,16 @@ import karelloSocial5 from "@/assets/karello-social-5.png";
 import karelloSocial6 from "@/assets/karello-social-6.png";
 import karelloSocial7 from "@/assets/karello-social-7.png";
 import karelloSocial8 from "@/assets/karello-social-8.png";
+import zedha1 from "@/assets/zedha-1.jpg";
+import zedha2 from "@/assets/zedha-2.jpg";
+import zedha3 from "@/assets/zedha-3.jpg";
+import zedha4 from "@/assets/zedha-4.jpg";
+import zedha5 from "@/assets/zedha-5.jpg";
+import zedha6 from "@/assets/zedha-6.jpg";
+import zedha7 from "@/assets/zedha-7.jpg";
+import zedha8 from "@/assets/zedha-8.jpg";
+import zedha9 from "@/assets/zedha-9.jpg";
+import zedha10 from "@/assets/zedha-10.jpg";
 
 export const Route = createFileRoute("/social-media")({
   head: () => ({
@@ -43,6 +53,7 @@ type Project = {
   description: string;
   gallery: string[];
   accent: string; // warm glow color (oklch)
+  preserveAspect?: boolean;
 };
 
 const allShots = [w1, w2, w3, w4, w5, w6];
@@ -59,6 +70,8 @@ const karelloShots = [
   karelloSocial7,
   karelloSocial8,
 ];
+
+const zedhaShots = [zedha1, zedha2, zedha3, zedha4, zedha5, zedha6, zedha7, zedha8, zedha9, zedha10];
 
 const projects: Project[] = [
   {
@@ -78,8 +91,9 @@ const projects: Project[] = [
     category: "Markrting Agency",
     description:
       "A Saudi-based marketing agency delivering innovative business solutions and strategic marketing services to brands across the Kingdom and international markets, helping businesses grow through creative campaigns, digital solutions, branding, and market-driven strategies.",
-    gallery: buildGallery(2),
+    gallery: zedhaShots,
     accent: "oklch(0.86 0.09 230)",
+    preserveAspect: true,
   },
   {
     id: "saffron",
@@ -352,7 +366,7 @@ function ProjectSection({
             transition={{ duration: 0.6, delay: (i % 4) * 0.06 }}
             whileHover={{ y: -6, scale: 1.02 }}
             onClick={() => onOpen(src)}
-            className="group relative aspect-square overflow-hidden rounded-2xl border border-white/60 bg-white/40 backdrop-blur-md"
+            className={`group relative ${project.preserveAspect ? "aspect-[4/5]" : "aspect-square"} overflow-hidden rounded-2xl border border-white/60 bg-white/40 backdrop-blur-md`}
             style={{ boxShadow: "var(--shadow-soft)" }}
           >
             <img
