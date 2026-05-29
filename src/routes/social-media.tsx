@@ -25,6 +25,16 @@ import zedha7 from "@/assets/zedha-7.jpg";
 import zedha8 from "@/assets/zedha-8.jpg";
 import zedha9 from "@/assets/zedha-9.jpg";
 import zedha10 from "@/assets/zedha-10.jpg";
+import tolaLogo from "@/assets/tola-baby-logo.jpg";
+import tola1 from "@/assets/tola-1.jpg";
+import tola2 from "@/assets/tola-2.jpg";
+import tola3 from "@/assets/tola-3.jpg";
+import tola4 from "@/assets/tola-4.jpg";
+import tola5 from "@/assets/tola-5.jpg";
+import tola6 from "@/assets/tola-6.jpg";
+import tola7 from "@/assets/tola-7.jpg";
+import tola8 from "@/assets/tola-8.jpg";
+import tola9 from "@/assets/tola-9.jpg";
 
 export const Route = createFileRoute("/social-media")({
   head: () => ({
@@ -54,6 +64,7 @@ type Project = {
   gallery: string[];
   accent: string; // warm glow color (oklch)
   preserveAspect?: boolean;
+  logo?: string;
 };
 
 const allShots = [w1, w2, w3, w4, w5, w6];
@@ -72,6 +83,7 @@ const karelloShots = [
 ];
 
 const zedhaShots = [zedha1, zedha2, zedha3, zedha4, zedha5, zedha6, zedha7, zedha8, zedha9, zedha10];
+const tolaShots = [tola1, tola2, tola3, tola4, tola5, tola6, tola7, tola8, tola9];
 
 const projects: Project[] = [
   {
@@ -102,8 +114,10 @@ const projects: Project[] = [
     category: "baby care brand",
     description:
       "Tola Baby is a baby care brand offering gentle haircare products specially made for kids and babies, including shampoos, leave-in creams, and oil replacements. The brand focuses on safe, soft, and nourishing formulas that keep children’s hair healthy, smooth, and easy to manage for everyday care",
-    gallery: buildGallery(4),
+    gallery: tolaShots,
     accent: "oklch(0.87 0.08 340)",
+    preserveAspect: true,
+    logo: tolaLogo,
   },
   {
     id: "lumen",
@@ -326,14 +340,22 @@ function ProjectSection({
               boxShadow: `0 10px 40px -10px ${project.accent}, inset 0 0 30px -10px ${project.accent}`,
             }}
           >
-            <span
-              className="bg-clip-text text-transparent"
-              style={{
-                backgroundImage: `linear-gradient(135deg, oklch(0.4 0.1 320), ${project.accent})`,
-              }}
-            >
-              {project.initials}
-            </span>
+            {project.logo ? (
+              <img
+                src={project.logo}
+                alt={`${project.name} logo`}
+                className="h-full w-full rounded-2xl object-contain p-1.5"
+              />
+            ) : (
+              <span
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: `linear-gradient(135deg, oklch(0.4 0.1 320), ${project.accent})`,
+                }}
+              >
+                {project.initials}
+              </span>
+            )}
           </motion.div>
           <div>
             <div className="flex items-center gap-3">
