@@ -73,11 +73,11 @@ const projects: Project[] = [
   },
   {
     id: "amber",
-    name: "Amber & Oud",
-    initials: "AO",
-    category: "Perfume House · Campaign Rollout",
+    name: "Zedha",
+    initials: "Z",
+    category: "Markrting Agency",
     description:
-      "A warm, sensual campaign series — molten golds, deep ambers and slow motion stories crafted for a niche perfume launch.",
+      "A Saudi-based marketing agency delivering innovative business solutions and strategic marketing services to brands across the Kingdom and international markets, helping businesses grow through creative campaigns, digital solutions, branding, and market-driven strategies.",
     gallery: buildGallery(2),
     accent: "oklch(0.86 0.09 230)",
   },
