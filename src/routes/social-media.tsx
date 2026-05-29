@@ -67,7 +67,7 @@ const projects: Project[] = [
     initials: "K",
     category: "E-commerce Campaigns · Social Media Design",
     description:
-      "A bold social media series for Karello featuring high-contrast campaign visuals, product storytelling and scroll-stopping promotional creatives.",
+      "Karrello is an ecommerce brand that offers innovative and practical products designed to make everyday life easier. The brand specializes in smart organizers, multifunctional tools, and useful home essentials that combine convenience, functionality, and modern design.",
     gallery: karelloShots,
     accent: "oklch(0.88 0.09 350)",
   },
