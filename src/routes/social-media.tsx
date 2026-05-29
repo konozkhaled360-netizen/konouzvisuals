@@ -15,6 +15,16 @@ import karelloSocial5 from "@/assets/karello-social-5.png";
 import karelloSocial6 from "@/assets/karello-social-6.png";
 import karelloSocial7 from "@/assets/karello-social-7.png";
 import karelloSocial8 from "@/assets/karello-social-8.png";
+import zedha1 from "@/assets/zedha-1.jpg";
+import zedha2 from "@/assets/zedha-2.jpg";
+import zedha3 from "@/assets/zedha-3.jpg";
+import zedha4 from "@/assets/zedha-4.jpg";
+import zedha5 from "@/assets/zedha-5.jpg";
+import zedha6 from "@/assets/zedha-6.jpg";
+import zedha7 from "@/assets/zedha-7.jpg";
+import zedha8 from "@/assets/zedha-8.jpg";
+import zedha9 from "@/assets/zedha-9.jpg";
+import zedha10 from "@/assets/zedha-10.jpg";
 
 export const Route = createFileRoute("/social-media")({
   head: () => ({
@@ -43,6 +53,7 @@ type Project = {
   description: string;
   gallery: string[];
   accent: string; // warm glow color (oklch)
+  preserveAspect?: boolean;
 };
 
 const allShots = [w1, w2, w3, w4, w5, w6];
@@ -59,6 +70,8 @@ const karelloShots = [
   karelloSocial7,
   karelloSocial8,
 ];
+
+const zedhaShots = [zedha1, zedha2, zedha3, zedha4, zedha5, zedha6, zedha7, zedha8, zedha9, zedha10];
 
 const projects: Project[] = [
   {
