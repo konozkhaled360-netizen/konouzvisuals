@@ -50,12 +50,13 @@ import azhaNew3 from "@/assets/azha-new-3.jpg";
 import azhaNew4 from "@/assets/azha-new-4.jpg";
 import azhaNew5 from "@/assets/azha-new-5.jpg";
 import azhaNew6 from "@/assets/azha-new-6.jpg";
-const azhaShots = [azhaNew1, azha1, azha2, azha3, azha4, azha5, azha6, azha7, azha8, azhaNew2, azhaNew3, azhaNew4, azhaNew5, azhaNew6];
 import dayrtLogo from "@/assets/dayrt-logo.jpg";
 import dayrt1 from "@/assets/dayrt-1.png";
 import dayrt2 from "@/assets/dayrt-2.png";
 import dayrt3 from "@/assets/dayrt-3.jpg";
 import dayrt4 from "@/assets/dayrt-4.png";
+
+const azhaShots = [azhaNew1, azha1, azha2, azha3, azha4, azha5, azha6, azha7, azha8, azhaNew2, azhaNew3, azhaNew4, azhaNew5, azhaNew6];
 const dayrtShots = [dayrt1, dayrt2, dayrt3, dayrt4];
 
 
