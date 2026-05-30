@@ -121,11 +121,11 @@ const projects: Project[] = [
   },
   {
     id: "lumen",
-    name: "Lumen Studio",
-    initials: "LS",
-    category: "Architecture · Visual Identity",
+    name: "\u200BAzha Serum",
+    initials: "AS",
+    category: "Pharmaceutical skincare ",
     description:
-      "Editorial-style social content for an architecture studio — minimal grids, soft daylight tones and cinematic depth.",
+      "A pharmaceutical company specialized in skincare and dermatological solutions, providing safe and effective products that support healthy, radiant skin.\n\n",
     gallery: buildGallery(1),
     accent: "oklch(0.88 0.08 220)",
   },
