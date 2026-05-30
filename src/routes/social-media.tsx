@@ -51,7 +51,7 @@ import azhaNew4 from "@/assets/azha-new-4.jpg";
 import azhaNew5 from "@/assets/azha-new-5.jpg";
 import azhaNew6 from "@/assets/azha-new-6.jpg";
 const azhaShots = [azhaNew1, azha1, azha2, azha3, azha4, azha5, azha6, azha7, azha8, azhaNew2, azhaNew3, azhaNew4, azhaNew5, azhaNew6];
-const azhaShots = [azha1, azha2, azha3, azha4, azha5, azha6, azha7, azha8];
+
 
 export const Route = createFileRoute("/social-media")({
   head: () => ({
