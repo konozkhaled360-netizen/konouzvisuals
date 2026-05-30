@@ -35,6 +35,16 @@ import tola6 from "@/assets/tola-6.jpg";
 import tola7 from "@/assets/tola-7.jpg";
 import tola8 from "@/assets/tola-8.jpg";
 import tola9 from "@/assets/tola-9.jpg";
+import azhaLogo from "@/assets/azha-logo.jpg";
+import azha1 from "@/assets/azha-1.jpg";
+import azha2 from "@/assets/azha-2.jpg";
+import azha3 from "@/assets/azha-3.jpg";
+import azha4 from "@/assets/azha-4.jpg";
+import azha5 from "@/assets/azha-5.jpg";
+import azha6 from "@/assets/azha-6.jpg";
+import azha7 from "@/assets/azha-7.jpg";
+import azha8 from "@/assets/azha-8.jpg";
+const azhaShots = [azha1, azha2, azha3, azha4, azha5, azha6, azha7, azha8];
 
 export const Route = createFileRoute("/social-media")({
   head: () => ({
@@ -126,8 +136,10 @@ const projects: Project[] = [
     category: "Pharmaceutical skincare ",
     description:
       "A pharmaceutical company specialized in skincare and dermatological solutions, providing safe and effective products that support healthy, radiant skin.\n\n",
-    gallery: buildGallery(1),
+    gallery: azhaShots,
     accent: "oklch(0.88 0.08 220)",
+    preserveAspect: true,
+    logo: azhaLogo,
   },
   {
     id: "vela",
