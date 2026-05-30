@@ -150,11 +150,11 @@ const projects: Project[] = [
   },
   {
     id: "vela",
-    name: "Vela Beauty",
-    initials: "VB",
-    category: "Beauty Brand · Launch Campaign",
+    name: "Dayrt aman",
+    initials: "DA",
+    category: "Graduation Project ",
     description:
-      "A glowing launch campaign — warm rose-gold palettes, tactile product moments and motion-led storytelling for the feed.",
+      "Daayrt Aman is a child safety awareness initiative dedicated to helping children understand personal boundaries, recognize unsafe situations, and build self-confidence through interactive learning experiences. Through educational content, games, stories, and family-focused resources, we aim to create a safer environment where every child feels protected, heard, and empowered.",
     gallery: buildGallery(3),
     accent: "oklch(0.89 0.08 0)",
   },
