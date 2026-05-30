@@ -136,8 +136,10 @@ const projects: Project[] = [
     category: "Pharmaceutical skincare ",
     description:
       "A pharmaceutical company specialized in skincare and dermatological solutions, providing safe and effective products that support healthy, radiant skin.\n\n",
-    gallery: buildGallery(1),
+    gallery: azhaShots,
     accent: "oklch(0.88 0.08 220)",
+    preserveAspect: true,
+    logo: azhaLogo,
   },
   {
     id: "vela",
