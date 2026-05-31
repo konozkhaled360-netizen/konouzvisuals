@@ -8,6 +8,7 @@ import { Contact } from "@/components/Contact";
 import { Nav, Footer } from "@/components/Nav";
 import { FloatingShapes } from "@/components/FloatingShapes";
 import { CursorGlow } from "@/components/CursorGlow";
+import { DesignStudioFX, HeroBuildOverlay } from "@/components/DesignStudioFX";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,8 +27,12 @@ function Index() {
     <main className="relative overflow-hidden">
       <CursorGlow />
       <FloatingShapes />
+      <DesignStudioFX />
       <Nav />
-      <Hero />
+      <div className="relative">
+        <HeroBuildOverlay />
+        <Hero />
+      </div>
       <About />
       <ToolsTech />
       <HowIWork />

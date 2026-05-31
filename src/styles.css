@@ -148,3 +148,31 @@
 .animate-float-slow { animation: float-slow 14s ease-in-out infinite; }
 .animate-twinkle { animation: twinkle 3s ease-in-out infinite; }
 .animate-scroll-bounce { animation: scroll-bounce 2s ease-in-out infinite; }
+
+/* === Design Studio FX === */
+.grid-lines {
+  background-image:
+    linear-gradient(to right, oklch(0.28 0.05 290 / 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.28 0.05 290 / 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.grid-lines-strong {
+  background-image:
+    linear-gradient(to right, oklch(0.28 0.05 290 / 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.28 0.05 290 / 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+}
+.noise-layer {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+html { scroll-behavior: smooth; }
+.mask-reveal {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 0%, black 100%, transparent 100%);
+  animation: mask-sweep 1.6s cubic-bezier(0.22,1,0.36,1) both;
+}
+@keyframes mask-sweep {
+  0% { -webkit-mask-position: -100% 0; -webkit-mask-size: 200% 100%; opacity: 0; }
+  100% { -webkit-mask-position: 0% 0; -webkit-mask-size: 200% 100%; opacity: 1; }
+}
+.magnetic { transition: transform 0.25s cubic-bezier(0.22,1,0.36,1); }
